@@ -45,7 +45,7 @@ def locate_card(cards, query):
     # position = 0
 
     # # print('cards', cards)
-    # # print('query', query)
+    # # print('query', query) 
 
     # #create a loop for repetition
     # while position < len(cards):
@@ -83,9 +83,19 @@ test = {
     'output' : 3
 }
 
+large_test = {
+    'input':{
+        'cards': list(range(10000000, 0, -1)),
+        'query': 2
+    },
+    'output': 9999998
+}
+
 tests = []
 #normal case
 tests.append(test)
+#large test case
+tests.append(large_test)
 #query is somewhere in the list
 tests.append({
     'input':{
@@ -101,14 +111,6 @@ tests.append({
         'query' : 4
     },
     'output' : 0
-})
-#query is last element
-tests.append({
-    'input':{
-        'cards': [3, -1, -9, -127],
-        'query' : -127
-    },
-    'output' : 3
 })
 #query is last element
 tests.append({
@@ -174,6 +176,7 @@ tests.append({
     },
     'output' : 5
 })
+
 
 
 def run_tests(tests, locate_card):
