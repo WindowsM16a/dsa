@@ -9,6 +9,7 @@ def binary_search(lo, hi, condition):
         else:
             lo = mid_position+1
     return -1
+#commit farming bruh
 
 def first_number(nums, target):
     def condition(mid_position):
